@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #1d2784 ;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.github{
+    color: #fff;
+    text-decoration: none;
+    font-size: .7em;
+    transition: 1s;
+}
+
+.github:hover{
+    color:#58f87b
+}

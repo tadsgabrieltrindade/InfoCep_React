@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Result from "./components/Result";
+import Seach from "./components/Seach";
 
-function App() {
+export default function App() {
+  const [dataCep, setDataCep] = useState(null);
+  const [cep, setCep] = useState('01001000');
+
+
+  useEffect(() => {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+          .then((data) => data.json())
+          .then((dataJson) => setDataCep(dataJson));
+  }, [cep])
+
+  const handleSetCep = (value) =>{
+   setCep(value)
+  }
+   
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Seach buttonFunction={handleSetCep} />
+      <Result dataInfoCep={dataCep} />
+
+    </>
   );
 }
-
-export default App;

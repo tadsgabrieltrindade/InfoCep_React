@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5em;
+}
+
+.labelText{
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.input{
+    padding: 1em 2em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.searcButton{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searcButtonText{
+  width: 30%;
+  margin-top: 1em;
+  margin-right: 2em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #1d2784;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.searcButtonText:hover{
+  background-color:#121850;
+  color: #58f87b;
+}
+
